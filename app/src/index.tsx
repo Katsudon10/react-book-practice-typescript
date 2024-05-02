@@ -3,13 +3,27 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ListTemplate } from './components/ListTemplate';
+import books from './components/books';
+import type { Book } from './components/Book';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <ListTemplate src={books}>
+      {(elem: Book) =>(
+        <>
+          <dt>
+            <a href={`https://wings.msn.to/books/${elem.isbn}/${elem.isbn}.jpg`}>
+              {elem.title} ({elem.price}円)
+            </a>
+          </dt>
+          <dd>{elem.summary}</dd>
+        </>
+      )}
+    </ListTemplate>
   </React.StrictMode>
 );
 

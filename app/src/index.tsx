@@ -8,15 +8,14 @@ import books from './components/books';
 import type { Book } from './components/Book';
 import HookThemeButton from './components/HookThemeButton';
 import MyThemeProvider from './components/MyThemeProvider';
+import HookReducerUp from './components/HookReducerUp';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <MyThemeProvider>
-     <HookThemeButton />
-   </MyThemeProvider>
+    <HookReducerUp init={0} />
   </React.StrictMode>
 );
 

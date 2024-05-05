@@ -10,13 +10,14 @@ import HookThemeButton from './components/HookThemeButton';
 import MyThemeProvider from './components/MyThemeProvider';
 import HookReducerUp from './components/HookReducerUp';
 import StateFormUC from './components/StateFormUC';
+import QueryPre from './components/QueryPre';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <StateFormUC />
+    <QueryPre />
   </React.StrictMode>
 );
 

@@ -9,13 +9,14 @@ import type { Book } from './components/Book';
 import HookThemeButton from './components/HookThemeButton';
 import MyThemeProvider from './components/MyThemeProvider';
 import HookReducerUp from './components/HookReducerUp';
+import StateFormUC from './components/StateFormUC';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <HookReducerUp init={0} />
+    <StateFormUC />
   </React.StrictMode>
 );
 

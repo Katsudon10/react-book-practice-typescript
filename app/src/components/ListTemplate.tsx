@@ -1,4 +1,4 @@
-import React,{ReactNode} from 'react';
+import React,{FC, ReactNode} from 'react';
 import type { Book } from './Book';  // インポート先が型情報であることを示す
 
 type ListTemplateProps = {
@@ -6,7 +6,7 @@ type ListTemplateProps = {
     children: (book: Book) => ReactNode
 };
 
-export const ListTemplate = ({ src, children }: ListTemplateProps) => {
+export const ListTemplate: FC<ListTemplateProps> = ({ src, children }) => {
     return (
         <dl>
             {

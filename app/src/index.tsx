@@ -11,13 +11,18 @@ import MyThemeProvider from './components/MyThemeProvider';
 import HookReducerUp from './components/HookReducerUp';
 import StateFormUC from './components/StateFormUC';
 import QueryPre from './components/QueryPre';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import QueryBasic from './components/QueryBasic';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+const cli = new QueryClient();
 root.render(
   <React.StrictMode>
-    <QueryPre />
+    <QueryClientProvider client={cli}>
+      <QueryBasic />
+    </QueryClientProvider>
   </React.StrictMode>
 );
 
